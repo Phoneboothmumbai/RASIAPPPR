@@ -1,0 +1,138 @@
+{
+  "identity": {
+    "name": "Rasino Drugs Pvt. Ltd.",
+    "archetype": "Clinical Swiss Precision",
+    "vibe": "Established, Global, Scientific, High-Fidelity",
+    "core_values": ["Precision", "Global Reach", "Certified Quality", "Innovation"]
+  },
+  "typography": {
+    "headings": {
+      "family": "Archivo, sans-serif",
+      "weights": ["600", "700", "800"],
+      "usage": "Use for all section titles, hero text, and major callouts. Tracking should be tight (-0.02em).",
+      "import_url": "https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600&display=swap"
+    },
+    "body": {
+      "family": "Public Sans, sans-serif",
+      "weights": ["300", "400", "500"],
+      "usage": "Use for all paragraphs, navigation, and data tables. High legibility focus."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#ffffff",
+      "background_alt": "#f8fafc",
+      "foreground": "#0f172a",
+      "primary": "#0f172a",
+      "primary_foreground": "#ffffff",
+      "secondary": "#f1f5f9",
+      "secondary_foreground": "#0f172a",
+      "accent": "#2563eb",
+      "accent_foreground": "#ffffff",
+      "muted": "#94a3b8",
+      "border": "#e2e8f0",
+      "success": "#059669",
+      "warning": "#d97706",
+      "error": "#dc2626"
+    },
+    "usage_rules": [
+      "Do NOT use gradients for backgrounds. Use solid colors or subtle noise textures.",
+      "Primary Blue (#2563eb) is for 'Active' states and 'Call to Actions' ONLY. Do not overuse.",
+      "Use 'Slate 900' (#0f172a) for all main text to ensure high contrast.",
+      "Backgrounds should be stark white or very pale slate (#f8fafc) to maintain the 'Clinical' look."
+    ]
+  },
+  "layout": {
+    "spacing_system": {
+      "base": "4px",
+      "container_padding": "p-6 md:p-12 lg:p-24",
+      "section_gap": "gap-16 md:gap-32"
+    },
+    "grid_system": {
+      "mode": "Tetris Grid",
+      "rules": [
+        "Avoid equal-width columns where possible.",
+        "Use 'col-span-2' vs 'col-span-1' to create rhythm.",
+        "Hero sections must be asymmetric (Text Left / Visual Right or vice versa)."
+      ]
+    },
+    "container": "max-w-7xl mx-auto"
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp corners (rounded-sm) or minimal radius (rounded-md). No pill shapes.",
+      "hover": "Translate Y -1px, slight shadow increase.",
+      "classes": "font-semibold tracking-wide uppercase text-sm px-8 py-4"
+    },
+    "cards": {
+      "style": "Flat, 1px border (border-slate-200), white background.",
+      "hover": "Border color darkens to Slate-400, no massive shadow lift."
+    },
+    "inputs": {
+      "style": "bg-slate-50 border-slate-200 focus:border-blue-600 focus:ring-0 rounded-sm"
+    },
+    "navigation": {
+      "style": "Glassmorphism (backdrop-blur-md, bg-white/80), sticky top-0 z-50, 1px bottom border."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Use a subtle noise overlay (opacity 0.03) on solid backgrounds to prevent 'digital flatness'.",
+    "motion": {
+      "library": "framer-motion",
+      "default_transition": {
+        "duration": 0.4,
+        "ease": [0.25, 0.4, 0.25, 1]
+      },
+      "scroll_reveal": "Elements should fade in and move up (y: 20 -> y: 0) as they enter the viewport."
+    },
+    "3d_elements": {
+      "library": "react-three-fiber",
+      "usage": "Hero section ONLY. A slow-rotating abstract molecule or crystal structure. Keep it minimal and monochromatic (Silver/Blue)."
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1631558554770-74e921444006",
+      "lab_interior": "https://images.unsplash.com/photo-1631558554770-74e921444006",
+      "factory_production": "https://images.unsplash.com/photo-1748000970909-845f4aa144d2",
+      "products_api": "https://images.unsplash.com/photo-1760960067586-3999b9aae844",
+      "logistics_global": "https://images.unsplash.com/photo-1688694554481-353762e2c905",
+      "molecule_abstract": "https://images.unsplash.com/photo-1706554597282-3cc8f3dfeca3",
+      "team_meeting": "https://images.unsplash.com/photo-1758691736975-9f7f643d178e"
+    },
+    "icons": "Use 'lucide-react' for UI icons. Use thin strokes (stroke-width={1.5}) for elegance."
+  },
+  "tech_stack": {
+    "framework": "React",
+    "styling": "Tailwind CSS",
+    "components": "Shadcn UI (Radix Primitives)",
+    "animation": "Framer Motion",
+    "3d": "React Three Fiber (Optional/Hero only)"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add the Google Fonts import to index.css immediately.",
+    "2. SETUP THEME: Update tailwind.config.js with the colors defined above.",
+    "3. BUILD LAYOUT: Create a 'Layout' component that includes the Sticky Glass Header and the Footer.",
+    "4. HERO SECTION: Implement the Hero with the 'Tetris Grid' - Text on left, 3D/Image on right.",
+    "5. PRODUCTS: Use a grid layout for the product catalog. Do not use a simple list.",
+    "6. FORMS: Use Shadcn Form components for the Inquiry modal. Style them with the 'Sharp' aesthetic.",
+    "7. TESTIDS: Add data-testid to all interactive elements (buttons, links, inputs)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts. Use asymmetry.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles (Sharp/Pill).",
+    "NEVER use AI assistant Emoji characters.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Prioritize using pre-existing components from src/components/ui.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports.",
+    "Use 'sonner' for toasts."
+  ]
+}
